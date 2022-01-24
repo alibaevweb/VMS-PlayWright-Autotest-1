@@ -6,8 +6,10 @@ export class HomePage {
 
     constructor(page: Page) {
         this.page = page;
-    }
+  
+  }
 
+    //Открыть главную страницу
     async open() {
         await this.page.goto('http://admin.qazvms.local/login');
     }
