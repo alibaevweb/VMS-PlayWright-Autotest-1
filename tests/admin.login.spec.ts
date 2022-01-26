@@ -40,6 +40,7 @@ test('Restore password', async ({ page }) => {
 
 });  
 
+//testautonovalue
   test('No value', async ({ page }) => {
     const homepage = new HomePage(page);
     const locator = page.locator('.MuiFormHelperText-contained'); 
@@ -48,7 +49,8 @@ test('Restore password', async ({ page }) => {
     await expect(locator).toHaveText(['Обязательно для заполнения','Пароль должен содержать минимум 8 символов']);
 
 });  
- 
+
+
   
   
   
