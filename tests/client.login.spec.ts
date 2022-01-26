@@ -39,17 +39,3 @@ test('Restore password', async ({ page }) => {
     await expect(locator).toHaveText(['xwkogypfnfztqalfyz@bvhrk.com']);
 
   });  
-  
-test('Restore password', async ({ page }) => {
-    const homepage = new HomePage(page);
-    const locator = page.locator('.MuiTypography-h6'); 
-    await homepage.open();
-    await new LoginPage(page).restorePassword(user.testemail)
-    await expect(locator).toHaveText(['xwkogypfnfztqalfyz@bvhrk.com']);
-
-  });  
-  
-
-  
-  
-  

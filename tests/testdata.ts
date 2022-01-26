@@ -5,4 +5,6 @@ export const user = {
     incorrectpassword: 'errorpassword',
     testemail: 'xwkogypfnfztqalfyz@bvhrk.com',
     testCamera: 'Тест ПТЗ',
+    noValueemail: '',
+    noValuepas: '',
 };
