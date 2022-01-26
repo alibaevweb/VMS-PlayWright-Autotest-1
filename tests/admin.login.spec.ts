@@ -86,10 +86,49 @@ test('Not registered user', async ({ page }) => {
 //Email кириллица  
 test('Cyrillic email', async ({ page }) => {
   const homepage = new HomePage(page);
-  const locator = page.locator('.MuiTypography-displayBlock'); 
+  const locator = page.locator('.MuiFormHelperText-contained'); 
   await homepage.open();
-  await new LoginPage(page).notRegisteredUser(user.notreguseremail, user.notreguserpass)
-  await expect(locator).toHaveText(['Пользователь не найден']);
+  await new LoginPage(page).сyrillicEmail(user.cyrillicemail, user.password)
+  await expect(locator).toHaveText(['E-mail введен неверно']);
 
 }); 
   
+//Email набор латинских букв 
+test('Latin email', async ({ page }) => {
+  const homepage = new HomePage(page);
+  const locator = page.locator('.MuiFormHelperText-contained'); 
+  await homepage.open();
+  await new LoginPage(page).latinEmail(user.latinemail, user.password)
+  await expect(locator).toHaveText(['E-mail введен неверно']);
+
+}); 
+
+//Email набор спец.символов 
+test('Special symbols email', async ({ page }) => {
+  const homepage = new HomePage(page);
+  const locator = page.locator('.MuiFormHelperText-contained'); 
+  await homepage.open();
+  await new LoginPage(page).specialSymbolsemail(user.specsymbolemail, user.password)
+  await expect(locator).toHaveText(['E-mail введен неверно']);
+
+}); 
+
+//Email без знака "@"
+test('Symbols email', async ({ page }) => {
+  const homepage = new HomePage(page);
+  const locator = page.locator('.MuiFormHelperText-contained'); 
+  await homepage.open();
+  await new LoginPage(page).symbolsEmail(user.symbolemail, user.password)
+  await expect(locator).toHaveText(['E-mail введен неверно']);
+
+}); 
+
+//Email без доменной части
+test('Symbols email', async ({ page }) => {
+  const homepage = new HomePage(page);
+  const locator = page.locator('.MuiFormHelperText-contained'); 
+  await homepage.open();
+  await new LoginPage(page).symbolsEmail(user.symbolemail, user.password)
+  await expect(locator).toHaveText(['E-mail введен неверно']);
+
+}); 

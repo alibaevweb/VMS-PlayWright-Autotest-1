@@ -6,5 +6,16 @@ export const user = {
     testemail: 'xwkogypfnfztqalfyz@bvhrk.com',
     testCamera: 'Тест ПТЗ',
     noValueemail: '',
-    noValuepas: '',
+    noValuepass: '',
+    blockedemail: 'vatiter217@peykesabz.com',
+    blockedpassword: 'C!Yng1&t37J89uj4',
+    remoteemail: 'hassletest917@gmail.com',
+    remotepassword: 'E&5c[B90XY2r7i3S',
+    notreguseremail: 'pakoj67899@showbaz.com',
+    notreguserpass: 'E&5c[B90XY2r7i3S',
+    cyrillicemail: 'фывфывукц',
+    latinemail: 'aderfggkaskd',
+    specsymbolemail:'!@#$%^&*()_+””№%:?*',
+    symbolemail: 'alibaevwebgmail.com',
+
 };
