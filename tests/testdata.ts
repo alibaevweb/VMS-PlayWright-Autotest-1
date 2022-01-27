@@ -17,5 +17,8 @@ export const user = {
     latinemail: 'aderfggkaskd',
     specsymbolemail:'!@#$%^&*()_+””№%:?*',
     symbolemail: 'alibaevwebgmail.com',
+    emailnotdomain: 'm.orynbay@srgdev',
+    emailAvailableChar: 'vms-admin@srgdev.kz',
+    adminpassword: '1q2w3e',
 
 };

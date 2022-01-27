@@ -67,6 +67,19 @@ export class LoginPage {
         await this.page.click('button:has-text("Войти в систему")');
     }
 
+    async emailwithoutdomain(emailnotdomain: string, password: string) {
+        await this.page.type('input[type="text"]', emailnotdomain);
+        await this.page.type('input[type="password"]', password);
+        await this.page.click('button:has-text("Войти в систему")');
+    }
+
+    async emailAvailableCharacters(emailAvailableChar: string, adminpassword: string) {
+        await this.page.type('input[type="text"]', emailAvailableChar);
+        await this.page.type('input[type="password"]', adminpassword);
+        await this.page.click('button:has-text("Войти в систему")');
+    }
+
+
 
 }
 
