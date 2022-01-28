@@ -177,6 +177,6 @@ test('No value password', async ({ page }) => {
   const locator = page.locator('.MuiFormHelperText-contained'); 
   await homepage.open();
   await new LoginPage(page).novaluePassword(user.adminemail, user.noValuepass)
-  await expect(locator).toHaveText(['Пароль должен содержать минимум 8 символов']);
+  await expect(locator).toHaveText(['Обязательно для заполнения']);
 
 }); 
