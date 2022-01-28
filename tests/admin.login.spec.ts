@@ -135,9 +135,48 @@ import { LoginPage } from '../pages/admin-login-page';
 //Email доступными символами «.», «_», «-»:
 test('Email available characters', async ({ page }) => {
   const homepage = new HomePage(page);
+  await homepage.open();
+  await new LoginPage(page).emailAvailableCharacters(user.adminemail, user.adminpassword)
+  await expect(page).toHaveURL('http://admin.qazvms.local/login');
+
+}); 
+
+//Проверка пароля на кириллицу 
+test('Password cyrillic', async ({ page }) => {
+  const homepage = new HomePage(page);
+  const locator = page.locator('.MuiTypography-displayBlock'); 
+  await homepage.open();
+  await new LoginPage(page).passwordCyrillic(user.adminemail, user.passwordcyrillic)
+  await expect(locator).toHaveText(['Логин или пароль введен неверно, пожалуйста, проверьте данные или обратитесь к администратору']);
+
+}); 
+
+//Проверка пароля на латиницу
+test('Password latin', async ({ page }) => {
+  const homepage = new HomePage(page);
+  const locator = page.locator('.MuiTypography-displayBlock'); 
+  await homepage.open();
+  await new LoginPage(page).passwordLatin(user.adminemail, user.passwordlatin)
+  await expect(locator).toHaveText(['Логин или пароль введен неверно, пожалуйста, проверьте данные или обратитесь к администратору']);
+
+}); 
+
+//Проверка пароля на спец.символы
+test('Password special symbols', async ({ page }) => {
+  const homepage = new HomePage(page);
+  const locator = page.locator('.MuiTypography-displayBlock'); 
+  await homepage.open();
+  await new LoginPage(page).passwordspecialsymbols(user.email, user.passwordspecsymbol)
+  await expect(locator).toHaveText(['Логин или пароль введен неверно, пожалуйста, проверьте данные или обратитесь к администратору']);
+
+}); 
+
+//Проверка пароля на пустое поле
+test('No value password', async ({ page }) => {
+  const homepage = new HomePage(page);
   const locator = page.locator('.MuiFormHelperText-contained'); 
   await homepage.open();
-  await new LoginPage(page).emailAvailableCharacters(user.emailAvailableChar, user.adminpassword)
-  await expect(page).toHaveURL('http://admin.qazvms.local/login');
+  await new LoginPage(page).novaluePassword(user.adminemail, user.noValuepass)
+  await expect(locator).toHaveText(['Пароль должен содержать минимум 8 символов']);
 
 }); 
