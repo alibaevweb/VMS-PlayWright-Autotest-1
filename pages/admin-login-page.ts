@@ -73,13 +73,37 @@ export class LoginPage {
         await this.page.click('button:has-text("Войти в систему")');
     }
 
-    async emailAvailableCharacters(emailAvailableChar: string, adminpassword: string) {
-        await this.page.type('input[type="text"]', emailAvailableChar);
+    async emailAvailableCharacters(adminemail: string, adminpassword: string) {
+        await this.page.type('input[type="text"]', adminemail);
         await this.page.type('input[type="password"]', adminpassword);
         await this.page.click('button:has-text("Войти в систему")');
     }
 
+    async passwordCyrillic(email: string, passwordcyrillic: string) {
+        await this.page.type('input[type="text"]', email);
+        await this.page.type('input[type="password"]', passwordcyrillic);
+        
+        await this.page.click('button:has-text("Войти в систему")');
+    }
 
+    async passwordLatin(adminemail: string, passwordlatin: string) {
+        await this.page.type('input[type="text"]', adminemail);
+        await this.page.type('input[type="password"]', passwordlatin);
+      
+        await this.page.click('button:has-text("Войти в систему")');
+    }
+    async passwordspecialsymbols(email: string, passwordspecsymbol: string) {
+        await this.page.type('input[type="text"]', email);
+        
+        await this.page.type('input[type="password"]', passwordspecsymbol);
+        await this.page.click('button:has-text("Войти в систему")');
+    }
+
+    async novaluePassword(adminemail: string, noValuepass: string) {
+        await this.page.type('input[type="text"]', adminemail);
+        await this.page.type('input[type="password"]', noValuepass);
+        await this.page.click('button:has-text("Войти в систему")');
+    }
 
 }
 
