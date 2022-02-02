@@ -8,6 +8,7 @@ export class OrganizationPage {
     }
     async openCreateparentOrganization() {
         await this.page.click('.MuiButtonBase-root.MuiButton-root.MuiButton-outlined.jss54');
+        await this.page.click('button:has-text("Отмена")');
     }
 
     async createParentOrganization(title: string, bin: string) {

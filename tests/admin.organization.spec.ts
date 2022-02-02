@@ -10,13 +10,13 @@ import { OrganizationPage } from "../pages/admin-organization-page";
     await homepage.open();
     await new LoginPage(page).login(user.email, user.password)
     await new OrganizationPage(page).openCreateparentOrganization()
-    await expect(page).toHaveURL('http://admin.qazvms.local/organizations-objects/organizations/organization/create');
+    await expect(page).toHaveURL('http://admin.qazvms.local/organizations-objects/organizations/*');
   });
 
 //Проверить создания головной организации
   test('Create parent organization', async ({ page }) => {
     const homepage = new HomePage(page);
-    const locator = page.locator('notification-message'); 
+    const locator = page.locator('.notification-message'); 
     await homepage.open();
     await new LoginPage(page).login(user.email, user.password)
     await new OrganizationPage(page).createParentOrganization(org.title, org.bin)
