@@ -105,6 +105,27 @@ export class LoginPage {
         await this.page.click('button');
         await this.page.click('button:has-text("Войти в систему")');
     }
+    async restorePasswordnovalue(noValueemail: string) {
+        await this.page.click('text=Восстановить пароль');
+        await this.page.type('input[type="text"]', noValueemail);
+        await this.page.click('button:has-text("Выслать ссылку")');
+    }
+    async restorePasswordemailwithoutdomain(emailnotdomain: string) {
+        await this.page.click('text=Восстановить пароль');
+        await this.page.type('input[type="text"]', emailnotdomain);
+        await this.page.click('button:has-text("Выслать ссылку")');
+    }
+    async restorePasswordemailcyrillic(cyrillicemail: string) {
+        await this.page.click('text=Восстановить пароль');
+        await this.page.type('input[type="text"]', cyrillicemail);
+        await this.page.click('button:has-text("Выслать ссылку")');
+    }
+    async restorePasswordemailnumber(emailnumber: string) {
+        await this.page.click('text=Восстановить пароль');
+        await this.page.type('input[type="text"]', emailnumber);
+        await this.page.click('button:has-text("Выслать ссылку")');
+    }
+
 
 }
 

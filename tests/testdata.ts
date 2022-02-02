@@ -23,5 +23,6 @@ export const user = {
     passwordcyrillic: 'фывфывфывфывфыв',
     passwordlatin: 'asdasdasdasdgds',
     passwordspecsymbol:'!@#$%^&*()_+”№%:',
+    emailnumber:'12343427876',
 
 };
