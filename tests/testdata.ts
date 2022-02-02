@@ -1,6 +1,8 @@
+//Данные для авторизации
 export const user = {
-    email: 'm.orynbay@srgdev.kz',
-    password: 'Astana001kz@',
+ 
+    email: 'alibaevweb@gmail.com',
+    password: '53Py&VF2A0@g4wS8',
     incorrectemail: 'm.orynbay@srgdev.kz1',
     incorrectpassword: 'errorpassword',
     testemail: 'xwkogypfnfztqalfyz@bvhrk.com',
@@ -23,6 +25,21 @@ export const user = {
     passwordcyrillic: 'фывфывфывфывфыв',
     passwordlatin: 'asdasdasdasdgds',
     passwordspecsymbol:'!@#$%^&*()_+”№%:',
-    emailnumber:'12343427876',
-
+    emailnumber:'12343427876',  
 };
+//данные для создание органзиции,объектов,камер
+export const org = {
+    title:'Тест1',
+    bin:'123456789011',
+}
+export const organization = {
+    title:'Тест2',
+    bin:'123456789012',
+
+}  
+export const object = {
+    title:'Тест3',
+}
+export const camera = {
+    title:'Тест4',
+}
