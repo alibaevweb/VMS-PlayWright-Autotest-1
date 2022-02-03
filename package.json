@@ -9,7 +9,7 @@
   "author": "Orynbay Miras",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.17.2",
+    "@playwright/test": "^1.18.1",
     "allure-playwright": "^2.0.0-beta.14",
     "faker": "^6.6.6",
     "playwright": "^1.18.0"

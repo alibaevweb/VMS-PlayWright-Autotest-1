@@ -7,12 +7,12 @@ export class OrganizationPage {
         this.page = page;
     }
     async openCreateparentOrganization() {
-        await this.page.click('.MuiButtonBase-root.MuiButton-root.MuiButton-outlined.jss54');
+        await this.page.click('button[title="Добавить головную организацию"]');
         await this.page.click('button:has-text("Отмена")');
     }
 
     async createParentOrganization(title: string, bin: string) {
-        await this.page.click('.MuiButtonBase-root.MuiButton-root.MuiButton-outlined.jss54');
+        await this.page.click('button[title="Добавить головную организацию"]');
         await this.page.type('input[placeholder="Название\\ организации"]', title);
         await this.page.type('text=Название организации - на русскомНазвание организации - на русском >> [placeholder="Название\\ организации"]', title);
         await this.page.type('input[placeholder="БИН"]', bin);
