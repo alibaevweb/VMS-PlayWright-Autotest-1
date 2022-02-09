@@ -28,9 +28,12 @@ export const user = {
     emailnumber:'12343427876',  
 };
 //данные для создание органзиции,объектов,камер
-export const org = {
+export const orgparent = {
     title:'Тест1',
     bin:'123456789011',
+    noValuetitle:'',
+    bin11:'12345678901',
+    bin13:'1234567890111',
 }
 export const organization = {
     title:'Тест2',
