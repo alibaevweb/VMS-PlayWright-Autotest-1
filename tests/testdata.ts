@@ -34,15 +34,35 @@ export const orgparent = {
     noValuetitle:'',
     bin11:'12345678901',
     bin13:'1234567890111',
+
 }
 export const organization = {
     title:'Тест2',
     bin:'123456789012',
+    noValuetitle:'',
+    bin11:'12345678901',
+    bin13:'1234567890111',
 
 }  
 export const object = {
     title:'Тест3',
+    noValuetitle:'',
 }
 export const camera = {
     title:'Тест4',
+    noValuetitle:'',
+    login:'admin',
+    password:'admin123',
+    ip:'12.200.10.101',
+    port:'555',
+    nologin:'',
+    nopassword:'',
+    noip:'',
+    noport:'',
+
+}  
+export const rules = {
+    text:'проверка текста',
+    
+    
 }

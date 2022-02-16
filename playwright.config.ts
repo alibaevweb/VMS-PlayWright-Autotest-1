@@ -2,7 +2,7 @@ import { PlaywrightTestConfig } from '@playwright/test';
 
 const config: PlaywrightTestConfig = {
   // Timeout
-  timeout: 10000,
+  timeout: 20000,
 
   use: {
     // Browser options
