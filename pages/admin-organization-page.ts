@@ -71,12 +71,3 @@ export class OrganizationPage {
     //         await this.page.type('text=Название организации - на русскомНазвание организации - на русском >> [placeholder="Название\\ организации"]', title);
     //         await this.page.click('input[name="object_type_id"]');
     //         await this.page.click('button:has-text("Сохранить изменения")');
-    
-            
-
-
-
-
-
-
-
